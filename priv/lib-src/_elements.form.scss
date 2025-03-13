@@ -1,0 +1,160 @@
+form {
+    input[type="text"].form-control,
+    input[type="text"],
+    input[type="search"].form-control,
+    input[type="search"],
+    input[type="password"].form-control,
+    input[type="password"],
+    input[type="email"].form-control,
+    input[type="email"],
+    input[type="file"].form-control,
+    input[type="file"] {
+        height: 4.5rem;
+        border: 2px solid var(--typographyColor);
+        font-family: inherit;
+        font-size: inherit;
+    }
+
+    input[type="password"],
+    input[type="email"],
+    input[type="text"] {
+        padding: 0 1rem;
+    }
+
+    fieldset {
+        padding: 0;
+    }
+
+    textarea.form-control,
+    textarea {
+        height: auto;
+        border: 2px solid var(--typographyColor);
+    }
+
+    label {
+        font-family: var(--primaryFont);
+        font-size: 1.3em;
+        letter-spacing: 0.02em;
+    }
+
+    select.form-control,
+    select {
+        height: 4.5rem;
+        padding: 0 1.5rem;
+        border: 2px solid var(--typographyColor);
+    }
+
+    .picture-preview {
+        display: none;
+    }
+}
+
+.form-group {
+    + .form-group {
+        margin-top: 2rem;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
+.f-date-input {
+    position: relative;
+
+    label {
+        display: block;
+        margin-bottom: 0;
+    }
+    
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        background: transparent;
+        bottom: 0;
+        cursor: pointer;
+        height: auto;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto;
+    }
+
+    @include breakpoint($largeBreakpoint) {
+        label {
+            display: none;
+        }
+    }
+}
+
+.form-control {
+    border: 2px solid var(--typographyColor);   
+    font-size: inherit;
+    color: inherit;
+}
+
+.form-group {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: var(--mainMargin);
+
+    > label {
+        flex-shrink: 0;
+        width: 30%;
+        order: 1;
+    }
+
+    > div {
+        width: calc(100% - (30% + var(--mainMargin)));
+        order: 2;
+    }
+
+    .help-block {
+        width: 30%;
+        order: 3;
+    }
+}
+
+.help-block {
+    font-size: 0.7em;
+}
+
+.form-select {
+    position: relative;
+    margin-bottom: 0.5em;
+
+    select {
+        appearance: none;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0;
+    }
+    
+    &:after {
+        content: '';
+        width: 1em;
+        height: 0.8em;
+        position: absolute;
+        top: 45px;
+        right: 10px;
+        background-color: var(--magenta);
+        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+        pointer-events: none;
+    }
+
+    @include breakpoint($largeBreakpoint) {
+        label {
+            display: none;
+        }
+
+        &:after {
+            top: 17px;
+        }   
+    }
+}

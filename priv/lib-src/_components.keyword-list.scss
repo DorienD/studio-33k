@@ -1,0 +1,17 @@
+.c-keyword-list {
+    @include striplist;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem;
+    font-size: 0.8em;
+    letter-spacing: 0.03em;
+    margin-right: auto;
+
+    li {
+        margin-bottom: 0.2rem;
+    }
+}
+
+.c-keyword-list__title {
+    margin-right: 0.5rem;
+}

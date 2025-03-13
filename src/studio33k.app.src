@@ -1,0 +1,20 @@
+{application, studio33k, [
+    {description, "Studio 33K"},
+    {vsn, git},
+    {registered, []},
+    {applications, [
+        kernel,
+        stdlib,
+        crypto,
+        public_key,
+        ssl,
+        inets,
+        cowboy,
+        cowmachine,
+        zotonic_launcher,
+        zotonic_core,
+        mysql
+    ]},
+    {env, []},
+    {modules, []}
+]}.

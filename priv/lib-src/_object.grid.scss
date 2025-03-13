@@ -1,0 +1,82 @@
+.o-grid {
+    @include breakpoint($mediumBreakpoint) {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 2.5rem;
+
+        &.-grid-small-gap {
+            grid-gap: 4px;
+        }
+
+        .c-card {
+            grid-column: span 6;
+        }
+    }
+
+    &.-flexible {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 2rem;
+    }
+
+    @include breakpoint($largeBreakpoint) {
+        .c-card {
+            grid-column: span 4;
+        }
+    }
+
+    @include breakpoint($hugeBreakpoint) {
+        .c-card {
+            grid-column: span 3;
+            height: 100%;
+        }
+    }
+}
+
+.o-flex {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2.5rem;
+
+    .c-card {
+        flex: 1;
+    }
+
+    @include breakpoint($mediumBreakpoint) {
+        flex-flow: row wrap;
+    }
+
+    @include breakpoint($largeBreakpoint) {
+        flex-flow: row wrap;
+    }
+}
+
+.o-grid.-grid-three {
+    .c-card {
+        grid-column: span 4;
+    }
+
+    .c-card__image {
+        aspect-ratio: 2/1;
+    }
+}
+
+.o-grid.-grid-two {
+    .c-card {
+        grid-column: span 6;
+    }
+    
+    .c-card__image {
+        aspect-ratio: 2/1;
+    }
+}
+
+.o-main-container {
+    width: 95%;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+.o-page-content {
+    margin-bottom: var(--mainMargin);
+}
