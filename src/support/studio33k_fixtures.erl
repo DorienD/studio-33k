@@ -10,7 +10,7 @@ datamodel(Context) ->
     Env = m_config:get_value(site, environment, Context),
     #datamodel{
         categories = [
-            {district, location, #{
+            {project, undefined, #{
                 <<"language">> => [ nl ],
                 <<"title">> => #trans{ tr = [
                     {nl, <<"Project">>}

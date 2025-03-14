@@ -92,20 +92,16 @@
     display: inline-flex;
     align-items: center;
     min-height: 4rem;
-    padding: 0.5rem 1.5rem;
-    font-size: 1em;
-    background: #CFCFCF;
+    padding: 0.5rem 1rem;
+    font-size: 0.9em;
+    line-height: 1;
     font-family: var(--quoteFont);
     text-transform: lowercase;
     text-decoration: none;
-    border: 2px solid transparent;
+    border: 1px solid black;
 
     &.-tickets {
         background: var(--primaryColor);
-    }
-
-    @include setInteractive {
-        border: 2px solid black;
     }
 }
 

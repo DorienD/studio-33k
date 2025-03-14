@@ -16,6 +16,7 @@
     "bootstrap/js/bootstrap.min.js"
     "js/modules/jquery.loadmask.js"
     "js/fancybox.js"
+    "js/masonry.js"
     "js/app.js"
     minify
 %}

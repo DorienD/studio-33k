@@ -3,33 +3,12 @@
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-gap: 2.5rem;
-
-        &.-grid-small-gap {
-            grid-gap: 4px;
-        }
-
-        .c-card {
-            grid-column: span 6;
-        }
     }
 
     &.-flexible {
         display: flex;
         flex-flow: column wrap;
         gap: 2rem;
-    }
-
-    @include breakpoint($largeBreakpoint) {
-        .c-card {
-            grid-column: span 4;
-        }
-    }
-
-    @include breakpoint($hugeBreakpoint) {
-        .c-card {
-            grid-column: span 3;
-            height: 100%;
-        }
     }
 }
 
@@ -72,11 +51,7 @@
 }
 
 .o-main-container {
-    width: 95%;
+    width: 100%;
     max-width: 1400px;
     margin-inline: auto;
-}
-
-.o-page-content {
-    margin-bottom: var(--mainMargin);
 }

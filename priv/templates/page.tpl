@@ -2,15 +2,11 @@
 
 {% block body_class %}t-text{% endblock %}
 
-{% block header %}
-    {% catinclude 'header/header-small.tpl' id %}
-{% endblock %}
-
 {% block content %}
-    <article class="o-main-container o-page-content c-block {% if not id.summary or not id.body %}-no-text{% endif %}">
-        {% if id.o.hasheader.id %}
-            <h1>{{ id.title }}</h1>
-        {% endif %}
+    <article class="o-page-content">
+        <h1>{{ id.title }}</h1>
+
+        {% include "keywords/keyword-list.tpl" %}
 
         {% block body %}
             {% if id.summary %}

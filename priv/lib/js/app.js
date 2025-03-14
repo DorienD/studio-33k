@@ -23,3 +23,12 @@ Fancybox.bind("[data-fancybox]", {
         },
       },
 });
+
+
+$('.c-masonry-list').masonry({
+  // options
+    itemSelector: '.c-card',
+    gutter: '.gutter-sizer',
+    horizontalOrder: true,
+    transitionDuration: '0.2s'
+});
