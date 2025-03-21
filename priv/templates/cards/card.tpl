@@ -3,7 +3,7 @@
     <div class="c-card -{{ id.category.name }} {% if not id.is_published %}-not-published{% endif %}">
         {% if dep %}
             <div class="c-card__image{% if not dep %} -fallback{% endif %}">
-                {% image dep width="600" %}
+                {% image dep mediaclass="card-image" crop_center=dep.crop_center %}
             </div>
         {% endif %}
 
@@ -15,8 +15,6 @@
                     </a>
                 </h3>
             {% endblock %}
-            
-            {% include "keywords/keyword-list-card.tpl" %}
         </div>
     </div>
 {% endwith %}

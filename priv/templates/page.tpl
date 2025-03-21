@@ -6,8 +6,6 @@
     <article class="o-page-content">
         <h1>{{ id.title }}</h1>
 
-        {% include "keywords/keyword-list.tpl" %}
-
         {% block body %}
             {% if id.summary %}
                 <p class="summary">{{ id.summary }}</p>

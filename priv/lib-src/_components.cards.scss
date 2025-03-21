@@ -88,6 +88,10 @@
     }
 }
 
+.o-grid .c-card__image {
+    aspect-ratio: 4/3;
+}
+
 .c-card__image {
     display: flex;
     align-items: center;

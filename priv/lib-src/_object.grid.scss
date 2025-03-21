@@ -2,13 +2,7 @@
     @include breakpoint($mediumBreakpoint) {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
-        grid-gap: 2.5rem;
-    }
-
-    &.-flexible {
-        display: flex;
-        flex-flow: column wrap;
-        gap: 2rem;
+        grid-gap: 4rem;
     }
 }
 

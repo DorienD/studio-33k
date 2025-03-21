@@ -404,7 +404,6 @@ body.-is-menu-open {
     display: grid;
     grid-template-columns: min(20%, 25rem) auto;
     grid-template-rows: 100%;
-    gap: 5rem;
   }
   body main {
     grid-column: 2;
@@ -417,7 +416,7 @@ main {
 }
 @media only screen and (min-width: 800px) {
   main {
-    padding: 5rem 0;
+    padding: 4rem;
   }
 }
 
@@ -766,13 +765,8 @@ form .picture-preview {
   .o-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 2.5rem;
+    grid-gap: 4rem;
   }
-}
-.o-grid.-flexible {
-  display: flex;
-  flex-flow: column wrap;
-  gap: 2rem;
 }
 
 .o-flex {
@@ -1375,6 +1369,10 @@ button {
 }
 .c-card__author svg {
   width: 12px;
+}
+
+.o-grid .c-card__image {
+  aspect-ratio: 4/3;
 }
 
 .c-card__image {

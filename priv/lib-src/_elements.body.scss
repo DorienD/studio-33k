@@ -81,7 +81,6 @@ body {
         display: grid;
         grid-template-columns: min(20%, 25rem) auto;
         grid-template-rows: 100%;
-        gap: 5rem;
 
         main {
             grid-column: 2;
@@ -94,7 +93,7 @@ main {
     padding: 2rem 2.5%;
     
     @include breakpoint($mediumBreakpoint) {
-        padding: 5rem 0;
+        padding: 4rem;
     }
 }
 
